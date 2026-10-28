@@ -1,15 +1,21 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import task1.PhoneValidator;
+import task2.UserJsonConverter;
+import task3.WordFrequency;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("=== Завдання 1 ===");
+        PhoneValidator validator = new PhoneValidator();
+        validator.printValidPhonesFromFile("resources/task1/file.txt");
+        System.out.println();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("=== Завдання 2 ===");
+        UserJsonConverter converter = new UserJsonConverter();
+        converter.convert("resources/task2/file.txt", "resources/task2/user.json");
+        System.out.println();
+
+        System.out.println("=== Завдання 3 ===");
+        WordFrequency wordFrequency = new WordFrequency();
+        wordFrequency.calculate("resources/task3/words.txt");
     }
 }
